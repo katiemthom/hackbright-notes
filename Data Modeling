@@ -1,0 +1,84 @@
+Data Modeling
+-------------
+
+"What are the objects in your application?"
+
+e.g. Herby the car?
+- name: Herby
+- make: BMW
+- model: bug
+- etc. 
+
+Translates to ---------->
+
+car = {
+	'name': 'Herby',
+	'make': 'BMW',
+	'model': 'Bug',
+	'purposes': ['Love', 'Driving around', 'Saving people'], 
+	'engine': {'location': 'back', 'cylinders': 4, 'loud': true}
+}
+
+hierarchical data structure: engine is also an object (in addition to car)
+
+!!! So... Let's think about modeling a book !!!
+-----------------------------------------------
+
+Book
+-title
+-author
+-isbn 
+-genre
+-cover_img
+-synopsis
+-num_pages
+
+"Alright so this is really wrong."
+
+Book
+----
+id
+
+Author
+------	
+id
+first
+last 
+
+Genre
+-----
+id
+name
+
+When you have a many to many relationship going on, use a join. 
+
+Books_Genres (has a relationship to books and genres)
+------------
+book_id
+genre_id
+
+So now books can have a property "genres."
+Props want a join for author and book as well, cover image and book, and..... like pretty much everything. 
+
+"Alright, so then we end up with a million tables."
+
+Baselines
+---------
+"What does something have to have at minimum to be this type of thing?"
+"What does everything have in common?"
+
+Check out schema.org 
+
+----> Draw Diagrams to start modeling objects <----
+
+There are also non-relational systems. 
+
+You can also store relationships as ojbects.  
+e.g. friendships
+----------------
+id
+friend_id
+friend2_id
+start_date 
+
+And then Liz talked a lot about modeling gay marriage.  

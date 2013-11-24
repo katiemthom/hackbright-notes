@@ -1,0 +1,65 @@
+//In JavaScript, always assign variables to a value.
+
+//e.g. Don't do this: 
+
+var b; 
+
+//Do this: 
+
+var b = 'something!';
+
+//Now we're talking about sessions.
+
+//Going into flask...
+
+from flask import Flask, session, render_template
+import random
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+	number = random.randint(0,100)
+	return "Hello unknown person, here is your number %d" % number
+
+if __name__ == "__main__": 
+	app.run(debug = True)
+
+//Everytime you refresh, you get a new number.
+
+//A session is a dictionary. 
+//Here we add the session.
+
+from flask import Flask, session, render_template
+import random
+
+app = Flask(__name__)
+app.secret_key = "This is not a secret"
+
+@app.route("/")
+def index():
+	number = session.get("number")
+	if number is None: 
+		number = random.randint(0,100)
+		session['number'] = number 
+	return "Hello unknown person, here is your number %d" % number
+
+if __name__ == "__main__": 
+	app.run(debug = True)
+
+//Now the number doesn't change! 
+
+//Long explanation of sessions where I stopped taking notes
+//because I was confused. :(
+
+//Browser stores encrypted session and shows it to the server
+//when it makes a request to the server.
+//An example of making a request: 
+//On facebook, I'm logged in and I want to see my wall.
+//Request: click wall and tell server "oh by the way I'm 
+//Katie" but it doesn't actually say Katie it says the
+//encrypted version
+
+//The secret key encrypts and decrypts the session.
+//What you save the secret key as doesn't matter much.
+

@@ -1,0 +1,41 @@
+--------tech talk amy--------------------
+
+check out the tech talk folder 
+
+mesh networds
+
+inspired by:
+	project loon - balloon powered internet by Google!
+
+vocab:
+	- topology: how a network is laid out
+	- amy is talking about mesh networds
+	- node: connection point
+	- redundancy: if one node fails, the network can still communicate
+	- link: connects the nodes together (can be cable or wireless) 
+	- in a mesh netword every node is connected to every other node 
+	- that's called a full mesh
+	- partial meshes...are partially like that (maybe one or two nodes aren't conntected to every other node, they're less expensive)
+
+wired vs unwired: 
+	- wireless mesh network (like project loon)
+	- there is a source where the connection comes from
+	- balloons are nodes
+	- each house has an antenna that talks to the closest balloon node to get a connection
+	- the loons are higher in the air than planes are!
+
+questions:
+	- project loon is being piloted in new zealand
+	- the goal is to provide internet to remote places
+	- speed is described as similar to a 3g network
+	- probably can't see them from the ground
+
+---------------interlude-----------------
+
+liz asks how html/css is going
+
+liz wants to talk about the box model 
+
+when you say float left:
+	- browser starts stacking the elements
+	- it starts with the first element and the left hand side of the screen

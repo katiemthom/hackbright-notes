@@ -1,0 +1,81 @@
+<!--
+------------------mentors----------------
+
+what is dev ops? 
+	- they take your programs and put them on a server so the world can use them!
+	- they know a lot about computers, traditionally ops people did not how to code though
+	- the hot new thing, programmers who also do the ops thing!
+	- they also keep the servers running
+	- they figure out what is wrong, and tell the right people to fix it 
+
+------------------html----------------
+
+chrome dev tools: how to get there 
+	- right click on webpage
+	- "Inspect Element"
+	- there are lots of tabs
+	- allows you to live edit! 
+
+for html we will use the elements tab
+
+tags 
+	- tags look like this: <html>
+	- they end too: </html>
+	- think of them like nested boxes
+
+how to open a .html file
+	- in your brower: 
+	- "open"
+	- select file 
+
+what does html mean?
+	- hyper text markup language
+
+developer.mozilla.org has great documentation, you should use it  
+
+github.com/lizTheDeveloper/HTML_Hackbright
+go to ex01
+-->
+
+<html>
+	<head> <!--style tells the browser we are using css to style our page-->
+		<style type="text/css"> 
+			h1 { 
+				font-family: arial;
+			}
+			#im_a_box {
+				color: red; 
+			}
+			.la {
+				background-color: yellow; 
+			}
+		</style>
+		<!-- above we make the heading a different font that's how you style a tag like h1 -->
+		<!-- above we make div "im_a_box" text red, style ids like im_a_box with # -->
+		<!-- above we make div "la" have a background color of yellow, style classes like la with . -->
+		<!-- use classes for many things, ids for one thing -->
+		<!-- e.g. class: text id: body_text -->
+		<!-- basically, ids are more specific -->
+		<!-- an element can have many classes, but only one id -->
+		<!-- usually we don't put css in the html file, usually we put it in another file --> 
+	</head>
+	<body>
+	<!-- This is a comment -->
+	<!-- The body is where you put your content!-->
+		<h1> <!-- h1 => header 1 -->
+			Hello
+		</h1> 
+		<div id="im_a_box"> <!--div: empty box id: allows us to "style" the div-->
+			thingssss
+		</div>
+		<div class="la"> <!--div: empty box class: allows us to "style" the div-->
+			thingssss
+		</div>
+	</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+$ virtualenv env
+$ . env/bin/activate
+
+$ deactivate
+
+only applies to python packages
+
+what is pip freeze? 
+
+move things like ngrok to env/bin

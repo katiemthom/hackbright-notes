@@ -1,0 +1,65 @@
+Heroku: We run your code for you.
+---------------------------------
+
+----------------------
+Right now: 100% local |
+----------------------
+bash environment(python(virtual env(code, etc.)))
+
+-----------
+Why heroku?|
+-----------
+Sharing, scaling, stability
+
+---------------
+The Heroku way |
+---------------
+Many identical copies of the app 
+They are called dynos 
+Small sharp tools
+
+--------------
+The structure |
+--------------
+Many dynos: 
+environment(python(your app))
+environment(python(your app))
+environment(python(your app))
++
+postgres db
++ 
+add-ons
+
+-----------
+How to use |
+-----------
+install command tools
+$ heroku create
+$ git push heroku master
+
+---------
+Procfile |
+---------
+web: gunicorn app:app (e.g. python app.py)
+worker: bin/work
+
+web -> web dyno (web requests)
+worker -> worker dyno (db requests)
+
+You can tell them to run as many web/worker dynos talking to each other!
+
+$ foreman start 
+Takes env file and runs procfile. 
+(Sets up your environment.)
+
+postgres://localhost/ratings
+(sqlite not scalable)
+
+1. Sign up at www.heroku.com
+2. toolbelt.heroku.com (forman and commandline tools)
+3. heroku create
+4. git push heroku master 
+
+$ ssh-keygen -t rsa
+$ heroku keys:clear
+$ heroku keys:add

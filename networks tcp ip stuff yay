@@ -1,0 +1,57 @@
+networks tcp ip stuff yay
+-------------------------
+
+structure
+---------
+operating system(python(program/app)) = interface_connection 
+										-> network port 
+										-> physical layer (wire) 
+										-> internet/LAN/whatever
+
+side note
+---------
+flask made a listener socket 
+
+some vocab
+----------
+port
+host -> the server that you're talking to (really an ip address)
+server: any machine that is listening for a request, and when 
+a request comes in, it serves a response 
+
+protocols
+---------
+tcp - transmission control protocol
+ip - internet protocol 
+ethernet protocol lets you talk over the wire 
+tcp/ip makes the internet exchange of data work
+web servers use http 
+dns
+email
+chat
+
+commands
+--------
+$ host google.com
+host: dns lookup
+$ ping google.com
+$ traceroute google.com
+
+
+tcp/ip protocol
+---------------
+you have an ip address and a port 
+the port defines what application your program talks to
+port 80: http
+port 25: email
+port 23: dns
+
+What did you mean by dns lookup? (host command)
+-----------------------------------------------
+dns domain name servie the method from going from domain name to number
+
+How do we make a server?
+------------------------
+python has a library called socket
+we can use it to make connections to sockets
+

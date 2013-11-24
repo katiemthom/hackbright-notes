@@ -1,0 +1,61 @@
+Let's talk about the conference. 
+
+What was the chef/puppet thing? 
+
+If you're getting to many requests to one machine.
+You buy another one and ops try to set it up with the correct packages and os, permissions, etc. 
+Then you need to install you're app on top the machine and configure the network.
+Basically, lots of stuff going on.  Chef and puppet are tools that help automate this setup. 
+
+Yes, use postgres and heroku for your project. 
+
+Does Heroku support postgis?
+
+We don't know.  Check out their plugins. If you want to use something nonstandard, check the plugins. 
+
+Breanna: A lot of the talks said: outsource everything!  What happens when one of the companies you rely on goes under? 
+
+A: For awhile "mashups" like padmapper were really popular.  Then craigslist said you can't use our data anymore.  Then padmapper kinda died, but if you check it now if still works.  So Google crawls the web and stores a copy of everything.  This is the cached copy.  Padmapper gets this data, so it never gets data directly from Craigslist. BUT the data is a couple hours old. 
+
+So some companies that rely on displaying other companies data, sometimes just die.  
+
+Jenny: What is tor? 
+
+A: Let's say you want to buy illegal drugs.  Or, you want to hire a hitman.  Remember when you send a get request and it sends you all those headers and html and at the bottom the ip address of the server.  So basically, requests get logged by ip address. So, you don't want to buy illegal drugs on craigslist, because you can be tracked down by api.  Tor is a proxy anonymizing service.  Basically, everyone shares all these ip addresses, and your request gets bounced around these addresses before it is sent, so you are untraceable.   
+
+Angie: What's edge caching? 
+
+A: So to connect to a server, latency is mostly determined by distance from that server.  Enter edge computing.  The idea is that you have a giant network that people are trying to access from varied distances away.  (After this it got a little confusing to me.)
+
+What we're doing today: 
+-----------------------
+$ sqlite3 test.db
+...
+>>> import sqlite3
+>>> c = sqlite3.connect('test.db')
+>>> cur = c.cursor()
+>>> results = cur.execute('select * from users;')
+>>> results.fetchall()
+(prints results)
+>>> results = cur.execute('insert into users values(null,"liz", "liz@hackbrightacademy.com", 15;')
+>>> c.commit()
+# our table is updated
+
+
+# this could go in model.py
+>>> class User(object): 
+>>> 	def __init__(self, row): 
+>>>			self.id = row[0]
+>>>			self.username = row[1]
+>>>			self.email = row[2]
+>>>			self.age = row[3]
+>>> u = User(row)
+
+SQLAlchemy does this in an automatic way. 
+# with sqlalchemy
+
+david = User(username="d",email="d@hackbrightacademy.com",age=27)
+
+session.add(david)
+session.commit()
+

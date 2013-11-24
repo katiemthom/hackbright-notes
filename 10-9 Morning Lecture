@@ -1,0 +1,106 @@
+## -----------databases------------------
+
+## a database lets you save things to a harddrive 
+
+## a database is a list of lists
+
+## so why don't we save it to a file? 
+
+## can organize data to make searching faster 
+
+## SQLite does this for you!
+
+## SQL = structured query language
+
+## -----------e.g.-----------------------
+
+## e.g. employees: database
+
+> insert into employees values(1, "Christian", "Fernandez", "c@hackbrightacademy.com")
+
+## show tables
+
+> . tables 
+employees 
+
+> .schema employees
+
+> .mode columns
+
+## show entries 
+
+> select * from employees;
+
+> insert into employees (first_name, last_name, email) values ("Liz", "Howard", "liz@hackbrightacademy.com");
+
+> select first_name from employees;
+
+> select first_name, id from employees;
+
+## select = show me
+> select first_name from employees where id=1; 
+
+> select first_name from employees where id < 3; 
+
+## id = primary key
+
+## ------------------joining-------------
+
+## what is a relational database? 
+
+> select employee_id, first_name, murder_victim, hit_cost from dark_secrets inner join employees on employee_id=employees.id; 
+
+## what is inner join--selects only matching records 
+
+> update employees set first_name="C-Dawg" where id=1; 
+
+## ---------------delete-----------------
+
+> delete from employees where id > 1;
+
+## CAREFUL! SELECT FIRST to make sure they are the rows you want!
+
+## --------------exercise----------------
+
+## launch 
+
+> sqlite3
+
+## mash w/ python by writing queries as strings 
+
+## db.execute(insert...)
+
+## database engine --> mySQL, etc. (also called database)
+
+## database --> file that holds data 
+
+## tutorials! at http://sqlzoo.net/wiki/Main_Page
+
+## chriszf/sql_lesson on github 
+
+## ---------------mentors----------------
+
+## try to meet once a week with mentors (higher-level)
+
+## use senior software engineers during projects 
+
+## keep in touch via email at least once a week
+
+## schedule around their schedule, be sure you have something to talk about once you meet
+
+## meet at their office a few times but have them come here also 
+
+## share your github and twitter with them 
+
+## maybe margie can be a mentor
+
+## try to schedule something tonight, talk to them about their expectations, how best to contact them, how many times they like to meet, ask about their background
+
+## pairing????
+
+
+
+
+
+
+

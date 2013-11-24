@@ -1,0 +1,67 @@
+Sorting Algorithms
+------------------
+
+Bubble
+------
+Ask each index if it is bigger than the next.  If so, switch.  If not, move on.  
+This shrinks the window to search by 1.
+Look at a pair at a time and make sure the biggest one is on the right. 
+So start at index 0, move to index 1, etc. 
+(Insert sort is kind of like bubble sort.)
+n^2 run time (bad)
+
+Insert Sort
+-----------
+Put the first element in a new list.
+Then take the next element and compare to each element in the new list to put it in the right spot. 
+
+Merge
+-----
+Keep splitting list in half unit the list is length one or two.
+This is recursive. 
+If there is one number return it.
+If there are two sort then return. 
+Merge: Look at the the zeroeth element of two lists at a time.
+Smallest element goes to the final list. 
+Repeat until the final list is complete. 
+nlog(n) run time
+n for the merge
+log(n) for the splitting
+
+Binary Search (not a sorting algorithm)
+---------------------------------------
+For a sorted list. 
+Let's say we are searching for a #. 
+We look at the middle element.
+Let's say our number is smaller than that element.
+Then we look only at the first half of the list.
+Then we look at the middle of that.
+Let's say our element is greater than that. 
+Then we look at the second half of that list (which is half of our origianl list).
+And so on and so forth. 
+
+#When we say log we mean log base 2.#
+
+Quick Sort
+----------
+Choose the first number in the list and use that as a pivot.
+Then go through and say bigger or smaller, put it on the appropriate side of the pivot. (n) 
+So the pivot is def in the right spot. 
+So look on each side of the pivot, and do the same thing! 
+This is recursive btw.
+Run time: nlog(n) best case
+BUT there is a pathological edge case, when the list is already sorted. --> n^2
+This is only ever as good as merge sort. 
+BUT merge sort takes up a lot of space. 
+YOU NEED TO BE ABLE TO CODE THIS.
+THERE ARE THREE DIFFERENT WAYS TO CODE IT.
+NAIVE: GO THROUGH LEFT TO RIGHT AND BREAK UP THE LEFT AND RIGHT INTO TWO DIFFERENT LISTS.
+Then there is Hoare's Partition and Lomato's Partition. 
+Hoare's: The way to do it without making new lists.
+There are two pointers, a large and small.
+You choose someone randomly out of the list, and that person is the pivot at moves to the end.
+This is getting too hard to explain in notes.  
+
+Bubble is good if the list is almost sorted.
+
+#Know the run times in this document.#

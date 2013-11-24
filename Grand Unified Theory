@@ -1,0 +1,45 @@
+Grand Unified Theory
+--------------------
+
+1. Identify all nouns.
+2. Crapify the nouns.
+3. Widget
+4. View
+
+Step 1, detailed:
+----------------- 
+
+Nouns
+-----
+users (have many comments, have many posts)
+comments (belongs to post, has user)
+posts (belongs to user, has many comments) 
+
+Diagram who belongs to who. 
+Each noun becomes a table
+Then you define relationships with edges: has one, has many, belongs to, has many and belongs to many 
+So then we figure out what goes in each table. 
+
+Step 2, detailed: 
+-----------------
+
+CREATE (make)
+RECOUNT (list)
+AMEND (change)
+PRINT (show)
+
+You basically need one function to handle each of these things.
+This usually translates to one controller. 
+
+Step 3, detailed: 
+-----------------
+
+The widget is the noun that is the most important thing.
+
+Step 4: 
+-------
+
+Design around that. 
+
+ 
+
